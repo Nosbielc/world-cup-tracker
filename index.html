@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copa Tracker</title>
+    <meta
+      name="description"
+      content="Acompanhe partidas ao vivo, próximos jogos, grupos e chaveamentos de uma competição de futebol em um site estático compatível com GitHub Pages."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">⚽</span>
+        <div>
+          <p class="brand-eyebrow">Cobertura especial</p>
+          <h1>Copa Tracker</h1>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button
+          id="theme-toggle"
+          class="icon-button"
+          type="button"
+          aria-label="Alternar tema claro e escuro"
+        >
+          <span aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Navegação principal">
+      <div class="section-nav__track">
+        <button class="nav-tab is-active" type="button" data-section="live">Ao vivo</button>
+        <button class="nav-tab" type="button" data-section="matches">Próximos jogos</button>
+        <button class="nav-tab" type="button" data-section="groups">Grupos</button>
+        <button class="nav-tab" type="button" data-section="second-phase">Segunda fase</button>
+        <button class="nav-tab" type="button" data-section="round-of-16">Oitavas</button>
+        <button class="nav-tab" type="button" data-section="quarter-finals">Quartas</button>
+        <button class="nav-tab" type="button" data-section="semi-finals">Semifinais</button>
+        <button class="nav-tab" type="button" data-section="final">Final</button>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <section id="section-live" class="page-section is-active" aria-labelledby="live-title">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <p class="section-kicker">Jogo em destaque</p>
+            <h2 id="live-title">Tudo sobre a partida do momento</h2>
+            <p>
+              Atualizações simuladas em tempo real, lances recentes e panorama rápido da
+              competição.
+            </p>
+          </div>
+          <div class="hero-stats" id="summary-cards"></div>
+        </div>
+
+        <div class="content-grid live-grid">
+          <div id="live-match" aria-live="polite"></div>
+          <aside class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="section-kicker">Lances</p>
+                <h3>Timeline da partida</h3>
+              </div>
+            </div>
+            <div id="live-events" class="events-list"></div>
+          </aside>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Radar</p>
+              <h3>Partidas em destaque</h3>
+            </div>
+          </div>
+          <div id="featured-matches" class="match-list"></div>
+        </div>
+      </section>
+
+      <section id="section-matches" class="page-section" aria-labelledby="matches-title" hidden>
+        <div class="panel">
+          <div class="panel-header panel-header--stack">
+            <div>
+              <p class="section-kicker">Agenda</p>
+              <h2 id="matches-title">Próximos jogos e resultados</h2>
+            </div>
+
+            <div class="filters" aria-label="Filtros de jogos">
+              <label class="filter-field">
+                <span>Fase</span>
+                <select id="phase-filter">
+                  <option value="all">Todas</option>
+                </select>
+              </label>
+
+              <label class="filter-field">
+                <span>Grupo</span>
+                <select id="group-filter">
+                  <option value="all">Todos</option>
+                </select>
+              </label>
+
+              <label class="filter-field">
+                <span>Status</span>
+                <select id="status-filter">
+                  <option value="all">Todos</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div id="matches-list" class="match-list"></div>
+        </div>
+      </section>
+
+      <section id="section-groups" class="page-section" aria-labelledby="groups-title" hidden>
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Classificação</p>
+              <h2 id="groups-title">Tabela dos grupos</h2>
+            </div>
+          </div>
+          <div id="groups-grid" class="groups-grid"></div>
+        </div>
+      </section>
+
+      <section
+        id="section-second-phase"
+        class="page-section"
+        aria-labelledby="second-phase-title"
+        hidden
+      >
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Chaveamento</p>
+              <h2 id="second-phase-title">Segunda fase</h2>
+            </div>
+          </div>
+          <div id="second-phase-bracket" class="bracket-scroll"></div>
+        </div>
+      </section>
+
+      <section
+        id="section-round-of-16"
+        class="page-section"
+        aria-labelledby="round-of-16-title"
+        hidden
+      >
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Chaveamento</p>
+              <h2 id="round-of-16-title">Oitavas de final</h2>
+            </div>
+          </div>
+          <div id="round-of-16-bracket" class="bracket-scroll"></div>
+        </div>
+      </section>
+
+      <section
+        id="section-quarter-finals"
+        class="page-section"
+        aria-labelledby="quarter-finals-title"
+        hidden
+      >
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Chaveamento</p>
+              <h2 id="quarter-finals-title">Quartas de final</h2>
+            </div>
+          </div>
+          <div id="quarter-finals-bracket" class="bracket-scroll"></div>
+        </div>
+      </section>
+
+      <section
+        id="section-semi-finals"
+        class="page-section"
+        aria-labelledby="semi-finals-title"
+        hidden
+      >
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Chaveamento</p>
+              <h2 id="semi-finals-title">Semifinais</h2>
+            </div>
+          </div>
+          <div id="semi-finals-bracket" class="bracket-scroll"></div>
+        </div>
+      </section>
+
+      <section id="section-final" class="page-section" aria-labelledby="final-title" hidden>
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Decisão</p>
+              <h2 id="final-title">Rota completa até a final</h2>
+            </div>
+          </div>
+          <div id="full-bracket" class="bracket-scroll"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
