@@ -536,10 +536,12 @@ body.dark-theme .section-nav {
   display: grid;
   border: 1px solid var(--border);
   background: var(--surface);
+  min-width: 0;
 }
 
 .group-stage-table {
   padding: 1rem;
+  min-width: 0;
 }
 
 .group-stage-title {
@@ -759,6 +761,28 @@ tr.qualifier {
 .empty-state {
   padding: 1rem;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  /* Hide W / D / L / GF / GA / % columns; keep Team, P, J, GD, Form */
+  .group-table th:nth-child(4),
+  .group-table td:nth-child(4),
+  .group-table th:nth-child(5),
+  .group-table td:nth-child(5),
+  .group-table th:nth-child(6),
+  .group-table td:nth-child(6),
+  .group-table th:nth-child(7),
+  .group-table td:nth-child(7),
+  .group-table th:nth-child(8),
+  .group-table td:nth-child(8),
+  .group-table th:nth-child(10),
+  .group-table td:nth-child(10) {
+    display: none;
+  }
+
+  .group-table {
+    min-width: 0;
+  }
 }
 
 @keyframes fadeUp {
