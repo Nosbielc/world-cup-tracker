@@ -1,5 +1,13 @@
 (function () {
   const data = window.TOURNAMENT_DATA;
+  
+  // Verificação de segurança
+  if (!data || !data.teams || !data.matches) {
+    console.error("❌ ERRO CRÍTICO: window.TOURNAMENT_DATA não carregado corretamente!");
+    console.error("Data:", data);
+    return;
+  }
+
   const teamsById = Object.fromEntries(data.teams.map((team) => [team.id, team]));
   const state = {
     activeSection: "live",
@@ -8,7 +16,7 @@
     filters: {
       phase: "all",
       group: "all",
-      status: "Agendado"
+      status: "all"
     },
     liveMatchId: "match-1",
     liveSimulationIndex: 2
@@ -23,6 +31,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     applyStoredTheme();
+    syncStickyOffset();
     bindNavigation();
     bindThemeToggle();
     bindGroupRoundControls();
@@ -30,7 +39,18 @@
     bindFilters();
     renderAll();
     startLiveSimulation();
+
+    window.addEventListener("resize", syncStickyOffset);
   });
+
+  function syncStickyOffset() {
+    const header = document.querySelector(".site-header");
+    if (!header) {
+      return;
+    }
+
+    document.documentElement.style.setProperty("--header-offset", `${header.offsetHeight}px`);
+  }
 
   function applyStoredTheme() {
     let storedTheme = "light";
@@ -96,6 +116,7 @@
     populateSelect("phase-filter", phases);
     populateSelect("group-filter", groups);
     populateSelect("status-filter", statuses);
+    applyDefaultStatusFilter(statuses);
   }
 
   function populateSelect(id, values) {
@@ -108,8 +129,20 @@
       select.appendChild(option);
     });
 
-    if (id === "status-filter") {
-      select.value = state.filters.status;
+  }
+
+  function applyDefaultStatusFilter(statuses) {
+    if (!statuses.length) {
+      state.filters.status = "all";
+      return;
+    }
+
+    const preferred = ["Agendado", "Ao vivo", "Encerrado"];
+    const fallbackStatus = preferred.find((status) => statuses.includes(status)) || "all";
+    state.filters.status = fallbackStatus;
+    const statusSelect = document.getElementById("status-filter");
+    if (statusSelect) {
+      statusSelect.value = fallbackStatus;
     }
   }
 
@@ -175,6 +208,7 @@
 
     const participants = [buildParticipant(liveMatch.home), buildParticipant(liveMatch.away)];
     const visibleEvents = getVisibleEvents(liveMatch);
+    const liveScore = normalizeScore(liveMatch.score);
 
     liveContainer.innerHTML = `
       <article class="live-card">
@@ -190,10 +224,10 @@
           <div class="team-chip">
             ${buildParticipantMarkup(participants[0])}
           </div>
-          <div class="scoreboard" aria-label="Placar ${participants[0].label} ${liveMatch.score.home} a ${liveMatch.score.away} ${participants[1].label}">
-            <span>${liveMatch.score.home}</span>
+          <div class="scoreboard" aria-label="Placar ${participants[0].label} ${liveScore.home} a ${liveScore.away} ${participants[1].label}">
+            <span>${liveScore.home}</span>
             <small>x</small>
-            <span>${liveMatch.score.away}</span>
+            <span>${liveScore.away}</span>
           </div>
           <div class="team-chip" style="justify-content:flex-end;">
             ${buildParticipantMarkup(participants[1], true)}
@@ -235,6 +269,8 @@
   }
 
   function renderMatches() {
+    ensureValidMatchFilters();
+
     const filteredMatches = data.matches.filter((match) => {
       const phaseMatch = state.filters.phase === "all" || match.phase === state.filters.phase;
       const groupMatch = state.filters.group === "all" || match.group === state.filters.group;
@@ -249,8 +285,30 @@
       return;
     }
 
-    matchesContainer.innerHTML = filteredMatches.slice().sort(sortMatches).map((match) => buildMatchCard(match)).join("");
+    const htmlCards = filteredMatches.slice().sort(sortMatches).map((match) => buildMatchCard(match)).join("");
+    matchesContainer.innerHTML = htmlCards;
     bindDetailsButtons();
+  }
+
+  function ensureValidMatchFilters() {
+    const phases = new Set(data.matches.map((match) => match.phase));
+    const groups = new Set(data.matches.map((match) => match.group));
+    const statuses = new Set(data.matches.map((match) => match.status));
+
+    if (state.filters.phase !== "all" && !phases.has(state.filters.phase)) {
+      state.filters.phase = "all";
+      document.getElementById("phase-filter").value = "all";
+    }
+
+    if (state.filters.group !== "all" && !groups.has(state.filters.group)) {
+      state.filters.group = "all";
+      document.getElementById("group-filter").value = "all";
+    }
+
+    if (state.filters.status !== "all" && !statuses.has(state.filters.status)) {
+      state.filters.status = "all";
+      document.getElementById("status-filter").value = "all";
+    }
   }
 
   function renderGroups() {
@@ -573,6 +631,7 @@
   function buildMatchCard(match) {
     const home = buildParticipant(match.home);
     const away = buildParticipant(match.away);
+    const score = normalizeScore(match.score);
     const expanded = state.expandedMatches.has(match.id);
     const eventMarkup = getMatchEvents(match)
       .slice(-3)
@@ -592,9 +651,9 @@
               ${buildParticipantMarkup(home)}
             </div>
             <div class="scoreboard">
-              <span>${match.score.home}</span>
+              <span>${score.home}</span>
               <small>x</small>
-              <span>${match.score.away}</span>
+              <span>${score.away}</span>
             </div>
             <div class="team-chip" style="justify-content:flex-end;">
               ${buildParticipantMarkup(away, true)}
@@ -752,4 +811,15 @@
 
     return iconMap[type] || "•";
   }
+
+  function normalizeScore(score) {
+    const hasHome = score && Number.isFinite(Number(score.home));
+    const hasAway = score && Number.isFinite(Number(score.away));
+
+    return {
+      home: hasHome ? Number(score.home) : "-",
+      away: hasAway ? Number(score.away) : "-"
+    };
+  }
 })();
+
