@@ -232,14 +232,14 @@ window.TOURNAMENT_DATA = {
   },
   bracket: {
     "Segunda fase": [
-      { id: "sf-1", label: "Jogo 1", home: "2º Grupo B", away: "3º Grupo A", datetime: "18 jun · 16:00", stadium: "Recife" },
-      { id: "sf-2", label: "Jogo 2", home: "2º Grupo D", away: "3º Grupo C", datetime: "18 jun · 20:00", stadium: "Brasília" },
-      { id: "sf-3", label: "Jogo 3", home: "2º Grupo F", away: "3º Grupo E", datetime: "19 jun · 16:00", stadium: "Curitiba" },
-      { id: "sf-4", label: "Jogo 4", home: "2º Grupo H", away: "3º Grupo G", datetime: "19 jun · 20:00", stadium: "Fortaleza" },
-      { id: "sf-5", label: "Jogo 5", home: "2º Grupo A", away: "3º Grupo B", datetime: "20 jun · 16:00", stadium: "Salvador" },
-      { id: "sf-6", label: "Jogo 6", home: "2º Grupo C", away: "3º Grupo D", datetime: "20 jun · 20:00", stadium: "Natal" },
-      { id: "sf-7", label: "Jogo 7", home: "2º Grupo E", away: "3º Grupo F", datetime: "21 jun · 16:00", stadium: "Belo Horizonte" },
-      { id: "sf-8", label: "Jogo 8", home: "2º Grupo G", away: "3º Grupo H", datetime: "21 jun · 20:00", stadium: "Rio de Janeiro" }
+      { id: "sf-1", label: "1º Turno - Jogo 1", home: "USA", away: "CAN", datetime: "28 jun · 16:00", stadium: "Detroit", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-2", label: "1º Turno - Jogo 2", home: "MEX", away: "BRA", datetime: "28 jun · 19:00", stadium: "Los Angeles", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-3", label: "1º Turno - Jogo 3", home: "FRA", away: "ARG", datetime: "28 jun · 22:00", stadium: "New York", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-4", label: "1º Turno - Jogo 4", home: "ESP", away: "ENG", datetime: "29 jun · 16:00", stadium: "Miami", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-5", label: "1º Turno - Jogo 5", home: "GER", away: "POR", datetime: "29 jun · 19:00", stadium: "Dallas", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-6", label: "1º Turno - Jogo 6", home: "NED", away: "JPN", datetime: "29 jun · 22:00", stadium: "Houston", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-7", label: "1º Turno - Jogo 7", home: "BEL", away: "URU", datetime: "30 jun · 16:00", stadium: "Chicago", group: "Winners R1", status: "Agendado", score: null },
+      { id: "sf-8", label: "1º Turno - Jogo 8", home: "SUI", away: "AUS", datetime: "30 jun · 19:00", stadium: "Seattle", group: "Winners R1", status: "Agendado", score: null }
     ],
     Oitavas: [
       { id: "oit-1", label: "Oitavas 1", home: "1º Grupo A", away: "Vencedor Segunda fase 1", datetime: "22 jun · 20:00", stadium: "Rio de Janeiro" },
