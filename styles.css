@@ -758,6 +758,98 @@ tr.qualifier {
   margin-top: 0.7rem;
 }
 
+.second-phase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding: 1rem 0;
+}
+
+.bracket-card--enhanced {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.bracket-card--enhanced:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.bracket-card--enhanced__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bracket-card--enhanced__label {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.bracket-card--enhanced__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  text-align: right;
+}
+
+.bracket-card--enhanced__teams {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bracket-card--enhanced .team-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--background);
+  border-radius: 0.75rem;
+}
+
+.bracket-card--enhanced .team-flag,
+.bracket-card--enhanced .team-placeholder {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.bracket-card--enhanced .team-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.bracket-card--enhanced .team-name strong {
+  font-size: 0.9rem;
+}
+
+.bracket-card--enhanced .team-name span {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.match-location--enhanced {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  text-align: center;
+}
+
 .empty-state {
   padding: 1rem;
   text-align: center;

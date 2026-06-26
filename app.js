@@ -576,10 +576,18 @@
   function renderPhaseBrackets() {
     Object.entries(phaseSectionMap).forEach(([sectionKey, phaseName]) => {
       const container = document.getElementById(`${sectionKey}-bracket`);
-      container.innerHTML = `<div class="bracket-track"><div class="bracket-column">${buildBracketCards(
-        phaseName,
-        data.bracket[phaseName]
-      )}</div></div>`;
+      
+      if (sectionKey === "second-phase") {
+        container.innerHTML = `<div class="second-phase-grid">${buildBracketCardsEnhanced(
+          phaseName,
+          data.bracket[phaseName]
+        )}</div>`;
+      } else {
+        container.innerHTML = `<div class="bracket-track"><div class="bracket-column">${buildBracketCards(
+          phaseName,
+          data.bracket[phaseName]
+        )}</div></div>`;
+      }
     });
   }
 
@@ -622,6 +630,38 @@
               ${buildParticipantMarkup(away)}
             </div>
             <p class="match-location">${fixture.stadium} · ${phaseName}</p>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  function buildBracketCardsEnhanced(phaseName, fixtures) {
+    return fixtures
+      .map((fixture) => {
+        const home = buildParticipant(fixture.home);
+        const away = buildParticipant(fixture.away);
+        const [date, time] = fixture.datetime.split(" · ");
+
+        return `
+          <article class="bracket-card--enhanced">
+            <div class="bracket-card--enhanced__header">
+              <span class="bracket-card--enhanced__label">${fixture.label}</span>
+              <div class="bracket-card--enhanced__meta">
+                <span>${date}</span>
+                <span>${time}</span>
+              </div>
+            </div>
+            <div class="bracket-card--enhanced__teams">
+              <div class="team-line">
+                ${buildParticipantMarkup(home)}
+              </div>
+              <div style="text-align: center; color: var(--text-soft); font-size: 0.85rem; font-weight: 500;">VS</div>
+              <div class="team-line">
+                ${buildParticipantMarkup(away)}
+              </div>
+            </div>
+            <p class="match-location--enhanced">${fixture.stadium}</p>
           </article>
         `;
       })
