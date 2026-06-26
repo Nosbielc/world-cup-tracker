@@ -823,6 +823,11 @@ tr.qualifier {
   letter-spacing: -0.3px;
 }
 
+.bracket-card--enhanced__title {
+  display: grid;
+  gap: 0.5rem;
+}
+
 .bracket-card--enhanced__meta {
   display: flex;
   flex-direction: column;
@@ -915,7 +920,6 @@ tr.qualifier {
 .match-location--enhanced::before {
   content: '📍';
   font-size: 0.9rem;
-}
 }
 
 .empty-state {

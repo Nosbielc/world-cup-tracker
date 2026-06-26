@@ -642,12 +642,15 @@
         const home = buildParticipant(fixture.home);
         const away = buildParticipant(fixture.away);
         const [date, time] = fixture.datetime.split(" · ");
-        const statusBadge = fixture.status ? `<span class="badge">${fixture.status}</span>` : '';
+        const statusBadge = fixture.status ? `<span class="badge">${fixture.status}</span>` : "";
 
         return `
           <article class="bracket-card--enhanced">
             <div class="bracket-card--enhanced__header">
-              <span class="bracket-card--enhanced__label">${fixture.label}</span>
+              <div class="bracket-card--enhanced__title">
+                <span class="bracket-card--enhanced__label">${fixture.label}</span>
+                ${statusBadge}
+              </div>
               <div class="bracket-card--enhanced__meta">
                 <span>${date}</span>
                 <span>${time}</span>
@@ -863,4 +866,3 @@
     };
   }
 })();
-

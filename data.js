@@ -232,24 +232,32 @@ window.TOURNAMENT_DATA = {
   },
   bracket: {
     "Segunda fase": [
-      { id: "sf-1", label: "1º Turno - Jogo 1", home: "USA", away: "CAN", datetime: "28 jun · 16:00", stadium: "Detroit", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-2", label: "1º Turno - Jogo 2", home: "MEX", away: "BRA", datetime: "28 jun · 19:00", stadium: "Los Angeles", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-3", label: "1º Turno - Jogo 3", home: "FRA", away: "ARG", datetime: "28 jun · 22:00", stadium: "New York", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-4", label: "1º Turno - Jogo 4", home: "ESP", away: "ENG", datetime: "29 jun · 16:00", stadium: "Miami", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-5", label: "1º Turno - Jogo 5", home: "GER", away: "POR", datetime: "29 jun · 19:00", stadium: "Dallas", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-6", label: "1º Turno - Jogo 6", home: "NED", away: "JPN", datetime: "29 jun · 22:00", stadium: "Houston", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-7", label: "1º Turno - Jogo 7", home: "BEL", away: "URU", datetime: "30 jun · 16:00", stadium: "Chicago", group: "Winners R1", status: "Agendado", score: null },
-      { id: "sf-8", label: "1º Turno - Jogo 8", home: "SUI", away: "AUS", datetime: "30 jun · 19:00", stadium: "Seattle", group: "Winners R1", status: "Agendado", score: null }
+      { id: "sf-73", label: "Partida 73", home: "RSA", away: "CAN", datetime: "28 jun · horário a definir", stadium: "Inglewood", status: "Programado", score: null },
+      { id: "sf-74", label: "Partida 74", home: "GER", away: "3º Grupo C/D/F", datetime: "29 jun · horário a definir", stadium: "Foxborough", status: "Programado", score: null },
+      { id: "sf-75", label: "Partida 75", home: "NED", away: "MAR", datetime: "29 jun · horário a definir", stadium: "Guadalupe", status: "Programado", score: null },
+      { id: "sf-76", label: "Partida 76", home: "BRA", away: "JPN", datetime: "29 jun · horário a definir", stadium: "Houston", status: "Programado", score: null },
+      { id: "sf-77", label: "Partida 77", home: "Vencedor Grupo I", away: "3º Grupo D/F/G", datetime: "30 jun · horário a definir", stadium: "East Rutherford", status: "A definir", score: null },
+      { id: "sf-78", label: "Partida 78", home: "CIV", away: "2º Grupo I", datetime: "30 jun · horário a definir", stadium: "Arlington", status: "A definir", score: null },
+      { id: "sf-79", label: "Partida 79", home: "MEX", away: "3º Grupo C/E/H", datetime: "30 jun · horário a definir", stadium: "Cidade do México", status: "A definir", score: null },
+      { id: "sf-80", label: "Partida 80", home: "USA", away: "BIH", datetime: "01 jul · horário a definir", stadium: "Santa Clara", status: "Programado", score: null },
+      { id: "sf-81", label: "Partida 81", home: "Vencedor Grupo G", away: "3º Grupo A/H/I/J", datetime: "01 jul · horário a definir", stadium: "Seattle", status: "A definir", score: null },
+      { id: "sf-82", label: "Partida 82", home: "Vencedor Grupo L", away: "3º Grupo E/I/J/K", datetime: "01 jul · horário a definir", stadium: "Atlanta", status: "A definir", score: null },
+      { id: "sf-83", label: "Partida 83", home: "2º Grupo K", away: "2º Grupo L", datetime: "02 jul · horário a definir", stadium: "Toronto", status: "A definir", score: null },
+      { id: "sf-84", label: "Partida 84", home: "Vencedor Grupo H", away: "2º Grupo J", datetime: "02 jul · horário a definir", stadium: "Inglewood", status: "A definir", score: null },
+      { id: "sf-85", label: "Partida 85", home: "SUI", away: "3º Grupo E/F/G/I/J", datetime: "02 jul · horário a definir", stadium: "Vancouver", status: "A definir", score: null },
+      { id: "sf-86", label: "Partida 86", home: "ARG", away: "2º Grupo H", datetime: "03 jul · horário a definir", stadium: "Miami Gardens", status: "A definir", score: null },
+      { id: "sf-87", label: "Partida 87", home: "AUS", away: "2º Grupo G", datetime: "03 jul · horário a definir", stadium: "Arlington", status: "A definir", score: null },
+      { id: "sf-88", label: "Partida 88", home: "Vencedor Grupo K", away: "3º Grupo D/E/I/J/L", datetime: "03 jul · horário a definir", stadium: "Kansas City", status: "A definir", score: null }
     ],
     Oitavas: [
-      { id: "oit-1", label: "Oitavas 1", home: "1º Grupo A", away: "Vencedor Segunda fase 1", datetime: "22 jun · 20:00", stadium: "Rio de Janeiro" },
-      { id: "oit-2", label: "Oitavas 2", home: "1º Grupo B", away: "Vencedor Segunda fase 2", datetime: "22 jun · 23:00", stadium: "São Paulo" },
-      { id: "oit-3", label: "Oitavas 3", home: "1º Grupo C", away: "Vencedor Segunda fase 3", datetime: "23 jun · 20:00", stadium: "Fortaleza" },
-      { id: "oit-4", label: "Oitavas 4", home: "1º Grupo D", away: "Vencedor Segunda fase 4", datetime: "23 jun · 23:00", stadium: "Brasília" },
-      { id: "oit-5", label: "Oitavas 5", home: "1º Grupo E", away: "Vencedor Segunda fase 5", datetime: "24 jun · 20:00", stadium: "Curitiba" },
-      { id: "oit-6", label: "Oitavas 6", home: "1º Grupo F", away: "Vencedor Segunda fase 6", datetime: "24 jun · 23:00", stadium: "Belo Horizonte" },
-      { id: "oit-7", label: "Oitavas 7", home: "1º Grupo G", away: "Vencedor Segunda fase 7", datetime: "25 jun · 20:00", stadium: "Recife" },
-      { id: "oit-8", label: "Oitavas 8", home: "1º Grupo H", away: "Vencedor Segunda fase 8", datetime: "25 jun · 23:00", stadium: "Salvador" }
+      { id: "oit-1", label: "Oitavas 1", home: "Vencedor Partida 74", away: "Vencedor Partida 77", datetime: "04 jul · horário a definir", stadium: "Philadelphia" },
+      { id: "oit-2", label: "Oitavas 2", home: "Vencedor Partida 73", away: "Vencedor Partida 75", datetime: "04 jul · horário a definir", stadium: "Houston" },
+      { id: "oit-3", label: "Oitavas 3", home: "Vencedor Partida 76", away: "Vencedor Partida 78", datetime: "05 jul · horário a definir", stadium: "East Rutherford" },
+      { id: "oit-4", label: "Oitavas 4", home: "Vencedor Partida 79", away: "Vencedor Partida 80", datetime: "05 jul · horário a definir", stadium: "Cidade do México" },
+      { id: "oit-5", label: "Oitavas 5", home: "Vencedor Partida 83", away: "Vencedor Partida 84", datetime: "06 jul · horário a definir", stadium: "Arlington" },
+      { id: "oit-6", label: "Oitavas 6", home: "Vencedor Partida 81", away: "Vencedor Partida 82", datetime: "06 jul · horário a definir", stadium: "Seattle" },
+      { id: "oit-7", label: "Oitavas 7", home: "Vencedor Partida 86", away: "Vencedor Partida 88", datetime: "07 jul · horário a definir", stadium: "Atlanta" },
+      { id: "oit-8", label: "Oitavas 8", home: "Vencedor Partida 85", away: "Vencedor Partida 87", datetime: "07 jul · horário a definir", stadium: "Vancouver" }
     ],
     Quartas: [
       { id: "qua-1", label: "Quartas 1", home: "Vencedor Oitavas 1", away: "Vencedor Oitavas 2", datetime: "27 jun · 18:00", stadium: "Rio de Janeiro" },
