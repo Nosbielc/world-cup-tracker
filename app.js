@@ -642,11 +642,15 @@
         const home = buildParticipant(fixture.home);
         const away = buildParticipant(fixture.away);
         const [date, time] = fixture.datetime.split(" · ");
+        const statusBadge = fixture.status ? `<span class="badge">${fixture.status}</span>` : "";
 
         return `
           <article class="bracket-card--enhanced">
             <div class="bracket-card--enhanced__header">
-              <span class="bracket-card--enhanced__label">${fixture.label}</span>
+              <div class="bracket-card--enhanced__title">
+                <span class="bracket-card--enhanced__label">${fixture.label}</span>
+                ${statusBadge}
+              </div>
               <div class="bracket-card--enhanced__meta">
                 <span>${date}</span>
                 <span>${time}</span>
@@ -656,7 +660,7 @@
               <div class="team-line">
                 ${buildParticipantMarkup(home)}
               </div>
-              <div style="text-align: center; color: var(--text-soft); font-size: 0.85rem; font-weight: 500;">VS</div>
+              <div class="bracket-card--enhanced__separator">⚽</div>
               <div class="team-line">
                 ${buildParticipantMarkup(away)}
               </div>
@@ -862,4 +866,3 @@
     };
   }
 })();
-
