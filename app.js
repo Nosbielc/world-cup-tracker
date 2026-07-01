@@ -616,6 +616,10 @@
       .map((fixture) => {
         const home = buildParticipant(fixture.home);
         const away = buildParticipant(fixture.away);
+        const fixtureScore =
+          Number.isFinite(fixture.score?.home) && Number.isFinite(fixture.score?.away)
+            ? `${fixture.score.home} x ${fixture.score.away}`
+            : null;
 
         return `
           <article class="bracket-card">
@@ -629,6 +633,7 @@
             <div class="team-line">
               ${buildParticipantMarkup(away)}
             </div>
+            ${fixtureScore ? `<p class="match-location"><strong>Placar:</strong> ${fixtureScore}</p>` : ""}
             <p class="match-location">${fixture.stadium} · ${phaseName}</p>
           </article>
         `;
@@ -643,6 +648,10 @@
         const away = buildParticipant(fixture.away);
         const [date, time] = fixture.datetime.split(" · ");
         const statusBadge = fixture.status ? `<span class="badge">${fixture.status}</span>` : "";
+        const fixtureScore =
+          Number.isFinite(fixture.score?.home) && Number.isFinite(fixture.score?.away)
+            ? `${fixture.score.home} x ${fixture.score.away}`
+            : "- x -";
 
         return `
           <article class="bracket-card--enhanced">
@@ -665,6 +674,7 @@
                 ${buildParticipantMarkup(away)}
               </div>
             </div>
+            <p class="match-location--enhanced"><strong>Placar:</strong> ${fixtureScore}</p>
             <p class="match-location--enhanced">${fixture.stadium}</p>
           </article>
         `;
