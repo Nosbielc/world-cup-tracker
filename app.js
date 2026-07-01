@@ -620,6 +620,7 @@
           Number.isFinite(fixture.score?.home) && Number.isFinite(fixture.score?.away)
             ? `${fixture.score.home} x ${fixture.score.away}`
             : null;
+        const resultNote = fixture.resultNote ? `<p class="match-location">${fixture.resultNote}</p>` : "";
 
         return `
           <article class="bracket-card">
@@ -634,6 +635,7 @@
               ${buildParticipantMarkup(away)}
             </div>
             ${fixtureScore ? `<p class="match-location"><strong>Placar:</strong> ${fixtureScore}</p>` : ""}
+            ${resultNote}
             <p class="match-location">${fixture.stadium} · ${phaseName}</p>
           </article>
         `;
@@ -652,6 +654,7 @@
           Number.isFinite(fixture.score?.home) && Number.isFinite(fixture.score?.away)
             ? `${fixture.score.home} x ${fixture.score.away}`
             : "- x -";
+        const resultNote = fixture.resultNote ? `<p class="match-location--enhanced">${fixture.resultNote}</p>` : "";
 
         return `
           <article class="bracket-card--enhanced">
@@ -675,6 +678,7 @@
               </div>
             </div>
             <p class="match-location--enhanced"><strong>Placar:</strong> ${fixtureScore}</p>
+            ${resultNote}
             <p class="match-location--enhanced">${fixture.stadium}</p>
           </article>
         `;
