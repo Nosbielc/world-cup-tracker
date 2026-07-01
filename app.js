@@ -634,6 +634,7 @@
               ${buildParticipantMarkup(away)}
             </div>
             ${fixtureScore ? `<p class="match-location"><strong>Placar:</strong> ${fixtureScore}</p>` : ""}
+            ${fixture.notes ? `<p class="match-location match-location--note">${fixture.notes}</p>` : ""}
             <p class="match-location">${fixture.stadium} · ${phaseName}</p>
           </article>
         `;
@@ -675,6 +676,7 @@
               </div>
             </div>
             <p class="match-location--enhanced"><strong>Placar:</strong> ${fixtureScore}</p>
+            ${fixture.notes ? `<p class="match-location--enhanced match-location--enhanced--note">${fixture.notes}</p>` : ""}
             <p class="match-location--enhanced">${fixture.stadium}</p>
           </article>
         `;

@@ -922,6 +922,16 @@ tr.qualifier {
   font-size: 0.9rem;
 }
 
+.match-location--enhanced--note::before {
+  content: '🥅';
+}
+
+.match-location--note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
 .empty-state {
   padding: 1rem;
   text-align: center;

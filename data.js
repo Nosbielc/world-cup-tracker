@@ -233,14 +233,14 @@ window.TOURNAMENT_DATA = {
   bracket: {
     "Segunda fase": [
       { id: "sf-73", label: "Partida 73", home: "RSA", away: "CAN", datetime: "28 jun · 17:00", stadium: "Inglewood", status: "Encerrado", score: { home: 1, away: 2 } },
-      { id: "sf-74", label: "Partida 74", home: "GER", away: "SWE", datetime: "29 jun · 13:00", stadium: "Foxborough", status: "Encerrado", score: { home: 2, away: 0 } },
-      { id: "sf-75", label: "Partida 75", home: "NED", away: "MAR", datetime: "29 jun · 16:00", stadium: "Guadalajara", status: "Encerrado", score: { home: 3, away: 1 } },
+      { id: "sf-74", label: "Partida 74", home: "GER", away: "PAR", datetime: "29 jun · 13:00", stadium: "Foxborough", status: "Encerrado", score: { home: 1, away: 1 }, notes: "Classificado nos pênaltis: Alemanha" },
+      { id: "sf-75", label: "Partida 75", home: "NED", away: "MAR", datetime: "29 jun · 16:00", stadium: "Guadalajara", status: "Encerrado", score: { home: 1, away: 1 }, notes: "Classificado nos pênaltis: Holanda" },
       { id: "sf-76", label: "Partida 76", home: "BRA", away: "JPN", datetime: "29 jun · 21:00", stadium: "Houston", status: "Encerrado", score: { home: 2, away: 1 } },
       { id: "sf-77", label: "Partida 77", home: "FRA", away: "IRI", datetime: "30 jun · 13:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 3, away: 0 } },
       { id: "sf-78", label: "Partida 78", home: "CIV", away: "NOR", datetime: "30 jun · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 1, away: 2 } },
       { id: "sf-79", label: "Partida 79", home: "MEX", away: "ECU", datetime: "30 jun · 21:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 2, away: 0 } },
       { id: "sf-80", label: "Partida 80", home: "USA", away: "BIH", datetime: "01 jul · 13:00", stadium: "Santa Clara", status: "Programado", score: null },
-      { id: "sf-81", label: "Partida 81", home: "EGY", away: "URU", datetime: "01 jul · 16:00", stadium: "Seattle", status: "Programado", score: null },
+      { id: "sf-81", label: "Partida 81", home: "EGY", away: "GHA", datetime: "01 jul · 16:00", stadium: "Seattle", status: "Programado", score: null },
       { id: "sf-82", label: "Partida 82", home: "ENG", away: "SEN", datetime: "01 jul · 19:00", stadium: "Atlanta", status: "Programado", score: null },
       { id: "sf-83", label: "Partida 83", home: "COL", away: "CRO", datetime: "02 jul · 13:00", stadium: "Toronto", status: "Programado", score: null },
       { id: "sf-84", label: "Partida 84", home: "ESP", away: "AUT", datetime: "02 jul · 16:00", stadium: "Inglewood", status: "Programado", score: null },
