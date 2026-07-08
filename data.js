@@ -241,36 +241,36 @@ window.TOURNAMENT_DATA = {
       { id: "sf-79", label: "Partida 79", home: "MEX", away: "ECU", datetime: "30 jun · 21:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 2, away: 0 } },
       { id: "sf-80", label: "Partida 80", home: "BEL", away: "SEN", datetime: "01 jul · 13:00", stadium: "A definir", status: "Encerrado", score: { home: 3, away: 2 } },
       { id: "sf-81", label: "Partida 81", home: "ENG", away: "COD", datetime: "01 jul · 16:00", stadium: "A definir", status: "Encerrado", score: { home: 2, away: 1 } },
-      { id: "sf-82", label: "Partida 82", home: "USA", away: "BIH", datetime: "01 jul · 21:00", stadium: "A definir", status: "Agendado", score: null },
-      { id: "sf-83", label: "Partida 83", home: "ESP", away: "AUT", datetime: "02 jul · 16:00", stadium: "A definir", status: "Agendado", score: null },
-      { id: "sf-84", label: "Partida 84", home: "POR", away: "CRO", datetime: "02 jul · 20:00", stadium: "A definir", status: "Agendado", score: null },
-      { id: "sf-85", label: "Partida 85", home: "SUI", away: "DZA", datetime: "03 jul · 00:00", stadium: "A definir", status: "Agendado", score: null },
-      { id: "sf-86", label: "Partida 86", home: "AUS", away: "EGY", datetime: "03 jul · 15:00", stadium: "A definir", status: "Agendado", score: null },
-      { id: "sf-87", label: "Partida 87", home: "ARG", away: "CPV", datetime: "03 jul · 19:00", stadium: "A definir", status: "Agendado", score: null },
-      { id: "sf-88", label: "Partida 88", home: "COL", away: "GHA", datetime: "03 jul · 22:30", stadium: "A definir", status: "Agendado", score: null }
+      { id: "sf-82", label: "Partida 82", home: "USA", away: "BIH", datetime: "01 jul · 21:00", stadium: "Santa Clara", status: "Encerrado", score: { home: 2, away: 0 } },
+      { id: "sf-83", label: "Partida 83", home: "ESP", away: "AUT", datetime: "02 jul · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 3, away: 0 } },
+      { id: "sf-84", label: "Partida 84", home: "POR", away: "CRO", datetime: "02 jul · 20:00", stadium: "Houston", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "sf-85", label: "Partida 85", home: "SUI", away: "DZA", datetime: "03 jul · 00:00", stadium: "Inglewood", status: "Encerrado", score: { home: 2, away: 0 } },
+      { id: "sf-86", label: "Partida 86", home: "AUS", away: "EGY", datetime: "03 jul · 15:00", stadium: "Kansas City", status: "Encerrado", score: { home: 1, away: 1 }, resultNote: "Egito venceu por 4 x 2 nos pênaltis." },
+      { id: "sf-87", label: "Partida 87", home: "ARG", away: "CPV", datetime: "03 jul · 19:00", stadium: "Seattle", status: "Encerrado", score: { home: 3, away: 2 } },
+      { id: "sf-88", label: "Partida 88", home: "COL", away: "GHA", datetime: "03 jul · 22:30", stadium: "Atlanta", status: "Encerrado", score: { home: 1, away: 0 } }
     ],
     Oitavas: [
-      { id: "oit-1", label: "Oitavas 1", home: "PAR", away: "FRA", datetime: "04 jul · horário a definir", stadium: "Philadelphia" },
-      { id: "oit-2", label: "Oitavas 2", home: "CAN", away: "MAR", datetime: "04 jul · horário a definir", stadium: "Houston" },
-      { id: "oit-3", label: "Oitavas 3", home: "BRA", away: "NOR", datetime: "05 jul · horário a definir", stadium: "East Rutherford" },
-      { id: "oit-4", label: "Oitavas 4", home: "MEX", away: "BEL", datetime: "05 jul · horário a definir", stadium: "Cidade do México" },
-      { id: "oit-5", label: "Oitavas 5", home: "Vencedor Partida 83", away: "Vencedor Partida 84", datetime: "06 jul · horário a definir", stadium: "Arlington" },
-      { id: "oit-6", label: "Oitavas 6", home: "ENG", away: "Vencedor Partida 82", datetime: "06 jul · horário a definir", stadium: "Seattle" },
-      { id: "oit-7", label: "Oitavas 7", home: "Vencedor Partida 86", away: "Vencedor Partida 88", datetime: "07 jul · horário a definir", stadium: "Atlanta" },
-      { id: "oit-8", label: "Oitavas 8", home: "Vencedor Partida 85", away: "Vencedor Partida 87", datetime: "07 jul · horário a definir", stadium: "Vancouver" }
+      { id: "oit-1", label: "Oitavas 1", home: "PAR", away: "FRA", datetime: "04 jul · 16:00", stadium: "Philadelphia", status: "Encerrado", score: { home: 0, away: 1 } },
+      { id: "oit-2", label: "Oitavas 2", home: "CAN", away: "MAR", datetime: "04 jul · 20:00", stadium: "Houston", status: "Encerrado", score: { home: 0, away: 3 } },
+      { id: "oit-3", label: "Oitavas 3", home: "BRA", away: "NOR", datetime: "05 jul · 16:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 1, away: 2 } },
+      { id: "oit-4", label: "Oitavas 4", home: "MEX", away: "ENG", datetime: "05 jul · 20:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 2, away: 3 } },
+      { id: "oit-5", label: "Oitavas 5", home: "POR", away: "ESP", datetime: "06 jul · 16:00", stadium: "Inglewood", status: "Encerrado", score: { home: 0, away: 1 } },
+      { id: "oit-6", label: "Oitavas 6", home: "USA", away: "BEL", datetime: "06 jul · 21:00", stadium: "Santa Clara", status: "Encerrado", score: { home: 1, away: 4 } },
+      { id: "oit-7", label: "Oitavas 7", home: "ARG", away: "EGY", datetime: "07 jul · 16:00", stadium: "Atlanta", status: "Encerrado", score: { home: 3, away: 2 } },
+      { id: "oit-8", label: "Oitavas 8", home: "SUI", away: "COL", datetime: "07 jul · 21:00", stadium: "Vancouver", status: "Encerrado", score: { home: 0, away: 0 }, resultNote: "Suíça venceu por 4 x 3 nos pênaltis." }
     ],
     Quartas: [
-      { id: "qua-1", label: "Quartas 1", home: "Vencedor Oitavas 1", away: "Vencedor Oitavas 2", datetime: "27 jun · 18:00", stadium: "Rio de Janeiro" },
-      { id: "qua-2", label: "Quartas 2", home: "Vencedor Oitavas 3", away: "Vencedor Oitavas 4", datetime: "27 jun · 22:00", stadium: "Brasília" },
-      { id: "qua-3", label: "Quartas 3", home: "Vencedor Oitavas 5", away: "Vencedor Oitavas 6", datetime: "28 jun · 18:00", stadium: "Belo Horizonte" },
-      { id: "qua-4", label: "Quartas 4", home: "Vencedor Oitavas 7", away: "Vencedor Oitavas 8", datetime: "28 jun · 22:00", stadium: "Fortaleza" }
+      { id: "qua-1", label: "Quartas 1", home: "FRA", away: "MAR", datetime: "09 jul · 17:00", stadium: "Foxborough", status: "Agendado", score: null },
+      { id: "qua-2", label: "Quartas 2", home: "ESP", away: "BEL", datetime: "10 jul · 16:00", stadium: "Inglewood", status: "Agendado", score: null },
+      { id: "qua-3", label: "Quartas 3", home: "NOR", away: "ENG", datetime: "11 jul · 18:00", stadium: "Miami", status: "Agendado", score: null },
+      { id: "qua-4", label: "Quartas 4", home: "ARG", away: "SUI", datetime: "11 jul · 22:00", stadium: "Kansas City", status: "Agendado", score: null }
     ],
     Semifinais: [
-      { id: "semi-1", label: "Semifinal 1", home: "Vencedor Quartas 1", away: "Vencedor Quartas 2", datetime: "30 jun · 21:00", stadium: "Salvador" },
-      { id: "semi-2", label: "Semifinal 2", home: "Vencedor Quartas 3", away: "Vencedor Quartas 4", datetime: "01 jul · 21:00", stadium: "São Paulo" }
+      { id: "semi-1", label: "Semifinal 1", home: "Vencedor Quartas 1", away: "Vencedor Quartas 2", datetime: "14 jul · 16:00", stadium: "Arlington", status: "Agendado", score: null },
+      { id: "semi-2", label: "Semifinal 2", home: "Vencedor Quartas 3", away: "Vencedor Quartas 4", datetime: "15 jul · 16:00", stadium: "Atlanta", status: "Agendado", score: null }
     ],
     Final: [
-      { id: "final-1", label: "Final", home: "Vencedor Semifinal 1", away: "Vencedor Semifinal 2", datetime: "02 jul · 20:30", stadium: "Brasília" }
+      { id: "final-1", label: "Final", home: "Vencedor Semifinal 1", away: "Vencedor Semifinal 2", datetime: "19 jul · 16:00", stadium: "East Rutherford", status: "Agendado", score: null }
     ]
   }
 };
