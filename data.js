@@ -260,17 +260,17 @@ window.TOURNAMENT_DATA = {
       { id: "oit-8", label: "Oitavas 8", home: "SUI", away: "COL", datetime: "07 jul · 21:00", stadium: "Vancouver", status: "Encerrado", score: { home: 0, away: 0 }, resultNote: "Suíça venceu por 4 x 3 nos pênaltis." }
     ],
     Quartas: [
-      { id: "qua-1", label: "Quartas 1", home: "FRA", away: "MAR", datetime: "09 jul · 17:00", stadium: "Foxborough", status: "Agendado", score: null },
-      { id: "qua-2", label: "Quartas 2", home: "ESP", away: "BEL", datetime: "10 jul · 16:00", stadium: "Inglewood", status: "Agendado", score: null },
-      { id: "qua-3", label: "Quartas 3", home: "NOR", away: "ENG", datetime: "11 jul · 18:00", stadium: "Miami", status: "Agendado", score: null },
-      { id: "qua-4", label: "Quartas 4", home: "ARG", away: "SUI", datetime: "11 jul · 22:00", stadium: "Kansas City", status: "Agendado", score: null }
+      { id: "qua-1", label: "Quartas 1", home: "FRA", away: "MAR", datetime: "09 jul · 17:00", stadium: "Foxborough", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "qua-2", label: "Quartas 2", home: "ESP", away: "BEL", datetime: "10 jul · 16:00", stadium: "Inglewood", status: "Encerrado", score: { home: 1, away: 0 } },
+      { id: "qua-3", label: "Quartas 3", home: "NOR", away: "ENG", datetime: "11 jul · 18:00", stadium: "Miami", status: "Encerrado", score: { home: 1, away: 2 } },
+      { id: "qua-4", label: "Quartas 4", home: "ARG", away: "SUI", datetime: "11 jul · 22:00", stadium: "Kansas City", status: "Encerrado", score: { home: 2, away: 2 }, resultNote: "Argentina venceu por 5 x 4 nos pênaltis." }
     ],
     Semifinais: [
-      { id: "semi-1", label: "Semifinal 1", home: "Vencedor Quartas 1", away: "Vencedor Quartas 2", datetime: "14 jul · 16:00", stadium: "Arlington", status: "Agendado", score: null },
-      { id: "semi-2", label: "Semifinal 2", home: "Vencedor Quartas 3", away: "Vencedor Quartas 4", datetime: "15 jul · 16:00", stadium: "Atlanta", status: "Agendado", score: null }
+      { id: "semi-1", label: "Semifinal 1", home: "FRA", away: "ESP", datetime: "14 jul · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 2, away: 0 } },
+      { id: "semi-2", label: "Semifinal 2", home: "ENG", away: "ARG", datetime: "15 jul · 16:00", stadium: "Atlanta", status: "Encerrado", score: { home: 1, away: 3 } }
     ],
     Final: [
-      { id: "final-1", label: "Final", home: "Vencedor Semifinal 1", away: "Vencedor Semifinal 2", datetime: "19 jul · 16:00", stadium: "East Rutherford", status: "Agendado", score: null }
+      { id: "final-1", label: "Final", home: "FRA", away: "ARG", datetime: "19 jul · 16:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 1, away: 2 }, resultNote: "Argentina campeã da Copa Tracker 2026." }
     ]
   }
 };

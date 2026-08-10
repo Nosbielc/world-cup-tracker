@@ -14,6 +14,7 @@
   --info: #0d5bd7;
   --danger: #d84c3e;
   --shadow: 0 18px 40px rgba(11, 28, 21, 0.08);
+  --gradient-hero: linear-gradient(135deg, rgba(15, 143, 77, 0.18), rgba(13, 91, 215, 0.14));
 }
 
 body.dark-theme {
@@ -32,6 +33,7 @@ body.dark-theme {
   --info: #58a7ff;
   --danger: #ff7765;
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+  --gradient-hero: linear-gradient(135deg, rgba(48, 200, 112, 0.16), rgba(88, 167, 255, 0.16));
 }
 
 * {
@@ -207,6 +209,7 @@ body.dark-theme .section-nav {
   gap: 1rem;
   padding: 1.25rem;
   margin-bottom: 1rem;
+  background: var(--gradient-hero), var(--surface);
 }
 
 .hero-copy h2 {
@@ -257,6 +260,7 @@ body.dark-theme .section-nav {
 
 .panel {
   padding: 1.2rem;
+  border-radius: 1.35rem;
 }
 
 .panel-header {
@@ -458,6 +462,12 @@ body.dark-theme .section-nav {
 .match-card {
   padding: 1rem;
   overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 143, 77, 0.25);
 }
 
 .match-card.is-live {
@@ -537,6 +547,9 @@ body.dark-theme .section-nav {
   border: 1px solid var(--border);
   background: var(--surface);
   min-width: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .group-stage-table {
@@ -647,6 +660,7 @@ body.dark-theme .group-table tbody td:not(:first-child) {
 .group-fixture-item {
   padding: 1rem;
   border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, transparent, rgba(15, 143, 77, 0.03));
 }
 
 .group-fixture-meta {
@@ -739,10 +753,15 @@ tr.qualifier {
 
 .bracket-column h3 {
   margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
 }
 
 .bracket-card {
   padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, var(--surface), var(--surface-muted));
 }
 
 .bracket-card__meta {
@@ -782,7 +801,7 @@ tr.qualifier {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  background: linear-gradient(135deg, var(--surface) 0%, var(--background) 100%);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-muted) 100%);
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   box-shadow: var(--shadow);
@@ -856,7 +875,7 @@ tr.qualifier {
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem;
-  background: var(--background);
+  background: var(--surface);
   border-radius: 0.9rem;
   transition: all 0.2s ease;
   border: 1px solid transparent;
