@@ -80,9 +80,9 @@ window.TOURNAMENT_DATA = {
     { id: "L", name: "Grupo L", teams: ["ENG", "CRO", "GHA", "PAN"] }
   ],
   matches: [
-    { id: "match-1", phase: "Fase de grupos", group: "A", status: "Encerrado", home: "MEX", away: "RSA", venue: "Mexico City Stadium", city: "Mexico City", datetime: "2026-06-11T15:00:00-04:00", score: { home: 2, away: 0 }, minute: "--", events: [], simulation: [] },
-    { id: "match-2", phase: "Fase de grupos", group: "A", status: "Encerrado", home: "KOR", away: "CZE", venue: "Estadio Guadalajara", city: "Guadalajara", datetime: "2026-06-11T22:00:00-04:00", score: { home: 2, away: 1 }, minute: "--", events: [], simulation: [] },
-    { id: "match-3", phase: "Fase de grupos", group: "B", status: "Encerrado", home: "CAN", away: "BIH", venue: "Toronto Stadium", city: "Toronto", datetime: "2026-06-12T15:00:00-04:00", score: { home: 1, away: 1 }, minute: "--", events: [], simulation: [] },
+    { id: "match-1", phase: "Fase de grupos", group: "A", status: "Ao vivo", home: "MEX", away: "RSA", venue: "Mexico City Stadium", city: "Mexico City", datetime: "2026-06-11T15:00:00-04:00", score: { home: 2, away: 0 }, minute: "67'", events: [], simulation: [] },
+    { id: "match-2", phase: "Fase de grupos", group: "A", status: "Agendado", home: "KOR", away: "CZE", venue: "Estadio Guadalajara", city: "Guadalajara", datetime: "2026-06-11T22:00:00-04:00", score: { home: 2, away: 1 }, minute: "--", events: [], simulation: [] },
+    { id: "match-3", phase: "Fase de grupos", group: "B", status: "Agendado", home: "CAN", away: "BIH", venue: "Toronto Stadium", city: "Toronto", datetime: "2026-06-12T15:00:00-04:00", score: { home: 1, away: 1 }, minute: "--", events: [], simulation: [] },
     { id: "match-4", phase: "Fase de grupos", group: "D", status: "Encerrado", home: "USA", away: "PAR", venue: "Los Angeles Stadium", city: "Los Angeles", datetime: "2026-06-12T21:00:00-04:00", score: { home: 4, away: 1 }, minute: "--", events: [], simulation: [] },
 
     { id: "match-5", phase: "Fase de grupos", group: "B", status: "Encerrado", home: "QAT", away: "SUI", venue: "San Francisco Bay Area Stadium", city: "San Francisco Bay Area", datetime: "2026-06-13T15:00:00-04:00", score: { home: 1, away: 1 }, minute: "--", events: [], simulation: [] },
@@ -182,95 +182,105 @@ window.TOURNAMENT_DATA = {
   },
   standings: {
     A: [
-      { team: "BRA", points: 6, played: 2, wins: 2, draws: 0, losses: 0, goalDifference: 4 },
-      { team: "NED", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: 1 },
-      { team: "SEN", points: 1, played: 1, wins: 0, draws: 1, losses: 0, goalDifference: 0 },
-      { team: "QAT", points: 0, played: 1, wins: 0, draws: 0, losses: 1, goalDifference: -3 }
+      { team: "MEX", points: 9, played: 3, wins: 3, draws: 0, losses: 0, goalDifference: 6 },
+      { team: "RSA", points: 4, played: 3, wins: 1, draws: 1, losses: 1, goalDifference: -1 },
+      { team: "KOR", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -1 },
+      { team: "CZE", points: 1, played: 3, wins: 0, draws: 1, losses: 2, goalDifference: -4 }
     ],
     B: [
-      { team: "FRA", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 3 },
-      { team: "USA", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 2 },
-      { team: "JPN", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: 0 },
-      { team: "MAR", points: 0, played: 2, wins: 0, draws: 0, losses: 2, goalDifference: -5 }
+      { team: "SUI", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 4 },
+      { team: "CAN", points: 4, played: 3, wins: 1, draws: 1, losses: 1, goalDifference: 5 },
+      { team: "BIH", points: 4, played: 3, wins: 1, draws: 1, losses: 1, goalDifference: -1 },
+      { team: "QAT", points: 1, played: 3, wins: 0, draws: 1, losses: 2, goalDifference: -8 }
     ],
     C: [
-      { team: "ARG", points: 6, played: 2, wins: 2, draws: 0, losses: 0, goalDifference: 5 },
-      { team: "MEX", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: 0 },
-      { team: "POL", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: -1 },
-      { team: "AUS", points: 0, played: 2, wins: 0, draws: 0, losses: 2, goalDifference: -4 }
+      { team: "BRA", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 6 },
+      { team: "MAR", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 3 },
+      { team: "SCO", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -3 },
+      { team: "HTI", points: 0, played: 3, wins: 0, draws: 0, losses: 3, goalDifference: -6 }
     ],
     D: [
-      { team: "ESP", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 2 },
-      { team: "GER", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 2 },
-      { team: "CRO", points: 1, played: 2, wins: 0, draws: 1, losses: 1, goalDifference: -1 },
-      { team: "KOR", points: 1, played: 2, wins: 0, draws: 1, losses: 1, goalDifference: -3 }
+      { team: "USA", points: 9, played: 3, wins: 3, draws: 0, losses: 0, goalDifference: 6 },
+      { team: "PAR", points: 6, played: 3, wins: 2, draws: 0, losses: 1, goalDifference: 0 },
+      { team: "AUS", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -2 },
+      { team: "TUR", points: 0, played: 3, wins: 0, draws: 0, losses: 3, goalDifference: -4 }
     ],
     E: [
-      { team: "ENG", points: 6, played: 2, wins: 2, draws: 0, losses: 0, goalDifference: 4 },
-      { team: "DEN", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: 1 },
-      { team: "SRB", points: 1, played: 2, wins: 0, draws: 1, losses: 1, goalDifference: -1 },
-      { team: "CMR", points: 1, played: 2, wins: 0, draws: 1, losses: 1, goalDifference: -4 }
+      { team: "GER", points: 6, played: 3, wins: 2, draws: 0, losses: 1, goalDifference: 6 },
+      { team: "CIV", points: 6, played: 3, wins: 2, draws: 0, losses: 1, goalDifference: 2 },
+      { team: "ECU", points: 4, played: 3, wins: 1, draws: 1, losses: 1, goalDifference: 0 },
+      { team: "CUW", points: 1, played: 3, wins: 0, draws: 1, losses: 2, goalDifference: -8 }
     ],
     F: [
-      { team: "POR", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 2 },
-      { team: "URU", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 1 },
-      { team: "GHA", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: 0 },
-      { team: "CAN", points: 0, played: 2, wins: 0, draws: 0, losses: 2, goalDifference: -3 }
+      { team: "NED", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 7 },
+      { team: "JPN", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 5 },
+      { team: "SWE", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -1 },
+      { team: "TUN", points: 0, played: 3, wins: 0, draws: 0, losses: 3, goalDifference: -11 }
     ],
     G: [
-      { team: "ITA", points: 6, played: 2, wins: 2, draws: 0, losses: 0, goalDifference: 5 },
-      { team: "COL", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: 1 },
-      { team: "SUI", points: 3, played: 2, wins: 1, draws: 0, losses: 1, goalDifference: -1 },
-      { team: "KSA", points: 0, played: 2, wins: 0, draws: 0, losses: 2, goalDifference: -5 }
+      { team: "EGY", points: 5, played: 3, wins: 1, draws: 2, losses: 0, goalDifference: 2 },
+      { team: "BEL", points: 5, played: 3, wins: 1, draws: 2, losses: 0, goalDifference: 1 },
+      { team: "IRI", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: 0 },
+      { team: "NZL", points: 1, played: 3, wins: 0, draws: 1, losses: 2, goalDifference: -3 }
     ],
     H: [
-      { team: "BEL", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 2 },
-      { team: "AUT", points: 4, played: 2, wins: 1, draws: 1, losses: 0, goalDifference: 1 },
-      { team: "CHI", points: 1, played: 2, wins: 0, draws: 1, losses: 1, goalDifference: -1 },
-      { team: "NGA", points: 1, played: 2, wins: 0, draws: 1, losses: 1, goalDifference: -2 }
+      { team: "ESP", points: 5, played: 3, wins: 1, draws: 2, losses: 0, goalDifference: 4 },
+      { team: "CPV", points: 5, played: 3, wins: 1, draws: 2, losses: 0, goalDifference: 1 },
+      { team: "URU", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: 0 },
+      { team: "KSA", points: 1, played: 3, wins: 0, draws: 1, losses: 2, goalDifference: -5 }
+    ],
+    I: [
+      { team: "FRA", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 5 },
+      { team: "NOR", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 4 },
+      { team: "SEN", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -2 },
+      { team: "IRQ", points: 0, played: 3, wins: 0, draws: 0, losses: 3, goalDifference: -7 }
+    ],
+    J: [
+      { team: "ARG", points: 9, played: 3, wins: 3, draws: 0, losses: 0, goalDifference: 8 },
+      { team: "AUT", points: 6, played: 3, wins: 2, draws: 0, losses: 1, goalDifference: 1 },
+      { team: "DZA", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -3 },
+      { team: "JOR", points: 0, played: 3, wins: 0, draws: 0, losses: 3, goalDifference: -6 }
+    ],
+    K: [
+      { team: "POR", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 6 },
+      { team: "COL", points: 6, played: 3, wins: 2, draws: 0, losses: 1, goalDifference: 2 },
+      { team: "UZB", points: 3, played: 3, wins: 1, draws: 0, losses: 2, goalDifference: -6 },
+      { team: "COD", points: 1, played: 3, wins: 0, draws: 1, losses: 2, goalDifference: -2 }
+    ],
+    L: [
+      { team: "ENG", points: 7, played: 3, wins: 2, draws: 1, losses: 0, goalDifference: 4 },
+      { team: "CRO", points: 6, played: 3, wins: 2, draws: 0, losses: 1, goalDifference: 0 },
+      { team: "GHA", points: 4, played: 3, wins: 1, draws: 1, losses: 1, goalDifference: 0 },
+      { team: "PAN", points: 0, played: 3, wins: 0, draws: 0, losses: 3, goalDifference: -4 }
     ]
   },
   bracket: {
     "Segunda fase": [
-      { id: "sf-73", label: "Partida 73", home: "RSA", away: "CAN", datetime: "28 jun · 17:00", stadium: "Inglewood", status: "Encerrado", score: { home: 0, away: 1 } },
-      { id: "sf-74", label: "Partida 74", home: "GER", away: "PAR", datetime: "29 jun · 13:00", stadium: "Foxborough", status: "Encerrado", score: { home: 1, away: 1 }, resultNote: "Paraguai venceu por 4 x 3 nos pênaltis." },
-      { id: "sf-75", label: "Partida 75", home: "NED", away: "MAR", datetime: "29 jun · 16:00", stadium: "Guadalajara", status: "Encerrado", score: { home: 1, away: 1 }, resultNote: "Marrocos venceu por 3 x 2 nos pênaltis." },
-      { id: "sf-76", label: "Partida 76", home: "BRA", away: "JPN", datetime: "29 jun · 21:00", stadium: "Houston", status: "Encerrado", score: { home: 2, away: 1 } },
-      { id: "sf-77", label: "Partida 77", home: "FRA", away: "SWE", datetime: "30 jun · 13:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 3, away: 0 } },
-      { id: "sf-78", label: "Partida 78", home: "CIV", away: "NOR", datetime: "30 jun · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 1, away: 2 } },
-      { id: "sf-79", label: "Partida 79", home: "MEX", away: "ECU", datetime: "30 jun · 21:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 2, away: 0 } },
-      { id: "sf-80", label: "Partida 80", home: "BEL", away: "SEN", datetime: "01 jul · 13:00", stadium: "A definir", status: "Encerrado", score: { home: 3, away: 2 } },
-      { id: "sf-81", label: "Partida 81", home: "ENG", away: "COD", datetime: "01 jul · 16:00", stadium: "A definir", status: "Encerrado", score: { home: 2, away: 1 } },
-      { id: "sf-82", label: "Partida 82", home: "USA", away: "BIH", datetime: "01 jul · 21:00", stadium: "Santa Clara", status: "Encerrado", score: { home: 2, away: 0 } },
-      { id: "sf-83", label: "Partida 83", home: "ESP", away: "AUT", datetime: "02 jul · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 3, away: 0 } },
-      { id: "sf-84", label: "Partida 84", home: "POR", away: "CRO", datetime: "02 jul · 20:00", stadium: "Houston", status: "Encerrado", score: { home: 2, away: 1 } },
-      { id: "sf-85", label: "Partida 85", home: "SUI", away: "DZA", datetime: "03 jul · 00:00", stadium: "Inglewood", status: "Encerrado", score: { home: 2, away: 0 } },
-      { id: "sf-86", label: "Partida 86", home: "AUS", away: "EGY", datetime: "03 jul · 15:00", stadium: "Kansas City", status: "Encerrado", score: { home: 1, away: 1 }, resultNote: "Egito venceu por 4 x 2 nos pênaltis." },
-      { id: "sf-87", label: "Partida 87", home: "ARG", away: "CPV", datetime: "03 jul · 19:00", stadium: "Seattle", status: "Encerrado", score: { home: 3, away: 2 } },
-      { id: "sf-88", label: "Partida 88", home: "COL", away: "GHA", datetime: "03 jul · 22:30", stadium: "Atlanta", status: "Encerrado", score: { home: 1, away: 0 } }
+      { id: "sf-73", label: "Partida 73", home: "MEX", away: "CAN", datetime: "28 jun · 17:00", stadium: "Inglewood", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "sf-74", label: "Partida 74", home: "SUI", away: "USA", datetime: "29 jun · 13:00", stadium: "Foxborough", status: "Encerrado", score: { home: 1, away: 0 } },
+      { id: "sf-75", label: "Partida 75", home: "BRA", away: "NED", datetime: "29 jun · 16:00", stadium: "Guadalajara", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "sf-76", label: "Partida 76", home: "ARG", away: "EGY", datetime: "29 jun · 21:00", stadium: "Houston", status: "Encerrado", score: { home: 3, away: 1 } },
+      { id: "sf-77", label: "Partida 77", home: "FRA", away: "NOR", datetime: "30 jun · 13:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 2, away: 0 } },
+      { id: "sf-78", label: "Partida 78", home: "GER", away: "CIV", datetime: "30 jun · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 1, away: 0 } },
+      { id: "sf-79", label: "Partida 79", home: "POR", away: "COL", datetime: "30 jun · 21:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 1, away: 1 }, resultNote: "Portugal venceu por 4 x 3 nos pênaltis." },
+      { id: "sf-80", label: "Partida 80", home: "ENG", away: "CRO", datetime: "01 jul · 13:00", stadium: "A definir", status: "Encerrado", score: { home: 2, away: 1 } }
     ],
     Oitavas: [
-      { id: "oit-1", label: "Oitavas 1", home: "PAR", away: "FRA", datetime: "04 jul · 16:00", stadium: "Philadelphia", status: "Encerrado", score: { home: 0, away: 1 } },
-      { id: "oit-2", label: "Oitavas 2", home: "CAN", away: "MAR", datetime: "04 jul · 20:00", stadium: "Houston", status: "Encerrado", score: { home: 0, away: 3 } },
-      { id: "oit-3", label: "Oitavas 3", home: "BRA", away: "NOR", datetime: "05 jul · 16:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 1, away: 2 } },
-      { id: "oit-4", label: "Oitavas 4", home: "MEX", away: "ENG", datetime: "05 jul · 20:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 2, away: 3 } },
-      { id: "oit-5", label: "Oitavas 5", home: "POR", away: "ESP", datetime: "06 jul · 16:00", stadium: "Inglewood", status: "Encerrado", score: { home: 0, away: 1 } },
-      { id: "oit-6", label: "Oitavas 6", home: "USA", away: "BEL", datetime: "06 jul · 21:00", stadium: "Santa Clara", status: "Encerrado", score: { home: 1, away: 4 } },
-      { id: "oit-7", label: "Oitavas 7", home: "ARG", away: "EGY", datetime: "07 jul · 16:00", stadium: "Atlanta", status: "Encerrado", score: { home: 3, away: 2 } },
-      { id: "oit-8", label: "Oitavas 8", home: "SUI", away: "COL", datetime: "07 jul · 21:00", stadium: "Vancouver", status: "Encerrado", score: { home: 0, away: 0 }, resultNote: "Suíça venceu por 4 x 3 nos pênaltis." }
+      { id: "oit-1", label: "Oitavas 1", home: "MEX", away: "BRA", datetime: "04 jul · 16:00", stadium: "Philadelphia", status: "Encerrado", score: { home: 0, away: 2 } },
+      { id: "oit-2", label: "Oitavas 2", home: "SUI", away: "ARG", datetime: "04 jul · 20:00", stadium: "Houston", status: "Encerrado", score: { home: 1, away: 3 } },
+      { id: "oit-3", label: "Oitavas 3", home: "FRA", away: "GER", datetime: "05 jul · 16:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "oit-4", label: "Oitavas 4", home: "POR", away: "ENG", datetime: "05 jul · 20:00", stadium: "Cidade do México", status: "Encerrado", score: { home: 1, away: 2 } }
     ],
     Quartas: [
-      { id: "qua-1", label: "Quartas 1", home: "FRA", away: "MAR", datetime: "09 jul · 17:00", stadium: "Foxborough", status: "Encerrado", score: { home: 2, away: 1 } },
-      { id: "qua-2", label: "Quartas 2", home: "ESP", away: "BEL", datetime: "10 jul · 16:00", stadium: "Inglewood", status: "Encerrado", score: { home: 1, away: 0 } },
-      { id: "qua-3", label: "Quartas 3", home: "NOR", away: "ENG", datetime: "11 jul · 18:00", stadium: "Miami", status: "Encerrado", score: { home: 1, away: 2 } },
-      { id: "qua-4", label: "Quartas 4", home: "ARG", away: "SUI", datetime: "11 jul · 22:00", stadium: "Kansas City", status: "Encerrado", score: { home: 2, away: 2 }, resultNote: "Argentina venceu por 5 x 4 nos pênaltis." }
+      { id: "qua-1", label: "Quartas 1", home: "BRA", away: "ARG", datetime: "09 jul · 17:00", stadium: "Foxborough", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "qua-2", label: "Quartas 2", home: "FRA", away: "ENG", datetime: "10 jul · 16:00", stadium: "Inglewood", status: "Encerrado", score: { home: 2, away: 1 } }
     ],
     Semifinais: [
-      { id: "semi-1", label: "Semifinal 1", home: "FRA", away: "ESP", datetime: "14 jul · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 2, away: 0 } },
-      { id: "semi-2", label: "Semifinal 2", home: "ENG", away: "ARG", datetime: "15 jul · 16:00", stadium: "Atlanta", status: "Encerrado", score: { home: 1, away: 3 } }
+      { id: "semi-1", label: "Semifinal 1", home: "BRA", away: "FRA", datetime: "14 jul · 16:00", stadium: "Arlington", status: "Encerrado", score: { home: 2, away: 1 } },
+      { id: "semi-2", label: "Semifinal 2", home: "ARG", away: "ENG", datetime: "15 jul · 16:00", stadium: "Atlanta", status: "Encerrado", score: { home: 3, away: 2 } }
     ],
     Final: [
-      { id: "final-1", label: "Final", home: "FRA", away: "ARG", datetime: "19 jul · 16:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 1, away: 2 }, resultNote: "Argentina campeã da Copa Tracker 2026." }
+      { id: "final-1", label: "Final", home: "BRA", away: "ARG", datetime: "19 jul · 16:00", stadium: "East Rutherford", status: "Encerrado", score: { home: 2, away: 2 }, resultNote: "Brasil venceu por 4 x 3 nos pênaltis." }
     ]
   }
 };
