@@ -957,6 +957,16 @@ tr.qualifier {
   text-align: center;
 }
 
+@media (max-width: 760px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 599px) {
   /* Hide W / D / L / GF / GA / % columns; keep Team, P, J, GD, Form */
   .group-table th:nth-child(4),
